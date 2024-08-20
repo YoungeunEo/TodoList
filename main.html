@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="header">
+            <div class="year-month"></div>  <!-- 현재 연도와 월 표시 -->
+            <div class="nav">     
+                <!-- 달력 넘기기 -->
+                <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                <button class="nav-btn go-today" onclick="goToday()">Today</button>
+                <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>    
+            </div>
+        </div>
+        <div class="main">
+            <!-- 요일과 날짜 -->
+            <div class="days">
+                <div class="day">SUN</div>
+                <div class="day">MON</div>
+                <div class="day">TUES</div>
+                <div class="day">WED</div>
+                <div class="day">THUR</div>
+                <div class="day">FRI</div>
+                <div class="day">SAT</div>
+            </div>
+            <div class="dates"></div>
+        </div>
+        <!-- 투두리스트 모달 -->
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <!-- 투두리스트 입력 폼 -->
+                <form id="todo-form">
+                    <input type="text" id="todo-input" name="todo" placeholder="오늘의 할 일을 입력하세요!" />
+                    <button type="submit">등록</button>
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>
